@@ -1,0 +1,22 @@
+.socials {
+    @extend %centeredFlex;
+    gap: 10px;
+  }
+  &__link {
+    @extend %centeredFlex;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: var(--icon-color);
+    transition: color var(--timing-function),
+      background-color var(--timing-function);
+  }
+  
+  &__link:hover,
+  &__link:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-bgc);
+  }
+  &__icon {
+    fill: currentColor;
+  }

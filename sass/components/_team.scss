@@ -1,0 +1,46 @@
+.team {
+  @include section;
+  background-color: var(--secondary-bgc);
+}
+&__title {
+  @extend %section__title;
+}
+
+&__list {
+  display: flex;
+  gap: 30px;
+}
+
+.teamcard {
+  padding-bottom: 30px;
+  width: 270px;
+  background-color: var(--primary-bgc);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+// .teamcard:not(:last-child) {
+//   margin-right: 30px;
+// }
+
+.teamcard__desc {
+  padding: 30px 0 0;
+}
+
+.teamcard__title {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--primary-text-color);
+}
+
+.teamcard__profession {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondary-text-color);
+}

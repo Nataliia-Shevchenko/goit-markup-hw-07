@@ -1,0 +1,100 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--footer-bgc);
+}
+&.container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.address {
+  margin-top: 20px;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__post {
+  color: var(--primary-bgc);
+  transition: color var(--timing-function);
+}
+.address__contact {
+  color: var(--footer-contact-color);
+  transition: color var(--timing-function);
+}
+
+.address__post:hover,
+.address__post:focus,
+.address__contact:hover,
+.address__contact:focus {
+  color: var(--accent-color);
+}
+.footer .text,
+.subscription__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+
+  color: var(--primary-bgc);
+}
+.footer .socials__link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--primary-bgc);
+  transition: background-color var(--timing-function);
+}
+.footer .socials__link:hover,
+.footer .socials__link:focus {
+  background-color: var(--accent-color);
+}
+.footer__form {
+  margin-left: auto;
+}
+.subscription__data {
+  display: flex;
+}
+.subscription__field {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  margin-right: 12px;
+  outline: unset;
+  width: 358px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--footer-contact-color);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  transition: border-color var(--timing-function);
+}
+
+.subscription__field:focus {
+  border-color: var(--accent-color);
+}
+.subscription-btn {
+  @extend %centeredFlex;
+  min-width: 200px;
+  min-height: 50px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: var(--primary-bgc);
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.subscription-btn__icon {
+  margin-left: 10px;
+  fill: currentColor;
+}
