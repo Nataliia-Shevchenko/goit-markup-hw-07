@@ -1,12 +1,15 @@
 .site-nav {
+  @extend .list;
   display: flex;
   margin-left: 93px;
+
+  &__item:not(last-child) {
+    margin-right: 50px;
+  }
 }
 
-.site-nav__item:not(last-child) {
-  margin-right: 50px;
-}
 .site-nav__link {
+  @extend .link;
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -16,16 +19,16 @@
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   transition: color var(--timing-function);
-}
 
-.site-nav__link.current {
-  position: relative;
-  color: var(--accent-color);
-}
+  &.current {
+    position: relative;
+    color: var(--accent-color);
+  }
 
-.site-nav__link:hover,
-.site-nav__link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .current::after {
